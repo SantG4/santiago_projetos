@@ -109,8 +109,9 @@ def delete_task(task_id):
 
 if __name__ == '__main__':
     with app.app_context():
-        db.create_all()  # Cria o banco de dados se não existir
+        db.create_all()  
     try:
-        app.run(debug=True, port=5001)  # Tente usar uma porta diferente, como 5001
+        app.run(debug=True, port=5001)  
     except Exception as e:
+
         print(f"An error occurred: {e}")
